@@ -2,7 +2,7 @@ import re
 
 with open('instruction_map.txt') as file:
     instr_map = file.read().split('\n')
-with open('asm_new_instr.txt') as file:
+with open('asm_code.txt') as file:
     asm_instr= file.read().split('\n')
 
 # Parse registers
@@ -143,4 +143,5 @@ while i + 1 < len(asm_instr):
     instructions.append(instruction)
     
 for i in instructions:
+
     print(i[0], i[1], i[2], i[3])
