@@ -1,0 +1,234 @@
+[Registers]
+
+SP 00000000
+R1 00000001
+R2 00000010
+R3 00000011
+R4 00000100
+R5 00000101
+R6 00000110
+R7 00000111
+R8 00001000
+R9 00001001
+R10 00001010
+R11 00001011
+R12 00001100
+R13 00001101
+R14 00001110
+R15 00001111
+R16 00010000
+R17 00010001
+R18 00010010
+R19 00010011
+R20 00010100
+R21 00010101
+R22 00010110
+R23 00010111
+R24 00011000
+R25 00011001
+R26 00011010
+OUT 00011011
+IN 00011011
+
+[Mnemomics]
+
+MOV a(register) b(register)
+01000100 bbbbbbbb 00000000 aaaaaaaa
+
+MOV a(register) b(immediate)
+11000100 bbbbbbbb 00000000 aaaaaaaa
+
+ADD c(register) a(register) b(register)
+00000000 aaaaaaaa bbbbbbbb cccccccc
+
+ADD c(register) a(immediate) b(register)
+10000000 aaaaaaaa bbbbbbbb cccccccc
+
+ADD c(register) a(register) b(immediate)
+01000000 aaaaaaaa bbbbbbbb cccccccc
+
+ADD c(register) a(immediate) b(immediate)
+11000000 aaaaaaaa bbbbbbbb cccccccc
+
+SUB c(register) a(register) b(register)
+00000001 aaaaaaaa bbbbbbbb cccccccc
+
+SUB c(register) a(immediate) b(register)
+10000001 aaaaaaaa bbbbbbbb cccccccc
+
+SUB c(register) a(register) b(immediate)
+01000001 aaaaaaaa bbbbbbbb cccccccc
+
+SUB c(register) a(immediate) b(immediate)
+11000001 aaaaaaaa bbbbbbbb cccccccc
+
+NOT b(register) a(register)
+01000101 aaaaaaaa 00000000 bbbbbbbb
+
+NOT b(register) a(immediate)
+11000101 aaaaaaaa 00000000 bbbbbbbb
+
+AND c(register) a(register) b(register)
+00000110 aaaaaaaa bbbbbbbb cccccccc
+
+AND c(register) a(immediate) b(register)
+10000110 aaaaaaaa bbbbbbbb cccccccc
+
+AND c(register) a(register) b(immediate)
+01000110 aaaaaaaa bbbbbbbb cccccccc
+
+AND c(register) a(immediate) b(immediate)
+11000110 aaaaaaaa bbbbbbbb cccccccc
+
+OR c(register) a(register) b(register)
+00000100 aaaaaaaa bbbbbbbb cccccccc
+
+OR c(register) a(immediate) b(register)
+10000100 aaaaaaaa bbbbbbbb cccccccc
+
+OR c(register) a(register) b(immediate)
+01000100 aaaaaaaa bbbbbbbb cccccccc
+
+OR c(register) a(immediate) b(immediate)
+11000100 aaaaaaaa bbbbbbbb cccccccc
+
+NAND c(register) a(register) b(register)
+00000111 aaaaaaaa bbbbbbbb cccccccc
+
+NAND c(register) a(immediate) b(register)
+10000111 aaaaaaaa bbbbbbbb cccccccc
+
+NAND c(register) a(register) b(immediate)
+01000111 aaaaaaaa bbbbbbbb cccccccc
+
+NAND c(register) a(immediate) b(immediate)
+11000111 aaaaaaaa bbbbbbbb cccccccc
+
+NOR c(register) a(register) b(register)
+00000101 aaaaaaaa bbbbbbbb cccccccc
+
+NOR c(register) a(immediate) b(register)
+10000101 aaaaaaaa bbbbbbbb cccccccc
+
+NOR c(register) a(register) b(immediate)
+01000101 aaaaaaaa bbbbbbbb cccccccc
+
+NOR c(register) a(immediate) b(immediate)
+11000101 aaaaaaaa bbbbbbbb cccccccc
+
+XOR c(register) a(register) b(register)
+00000010 aaaaaaaa bbbbbbbb cccccccc
+
+XOR c(register) a(immediate) b(register)
+10000010 aaaaaaaa bbbbbbbb cccccccc
+
+XOR c(register) a(register) b(immediate)
+01000010 aaaaaaaa bbbbbbbb cccccccc
+
+XOR c(register) a(immediate) b(immediate)
+11000010 aaaaaaaa bbbbbbbb cccccccc
+
+XNOR c(register) a(register) b(register)
+00000011 aaaaaaaa bbbbbbbb cccccccc
+
+XNOR c(register) a(immediate) b(register)
+10000011 aaaaaaaa bbbbbbbb cccccccc
+
+XNOR c(register) a(register) b(immediate)
+01000011 aaaaaaaa bbbbbbbb cccccccc
+
+XNOR c(register) a(immediate) b(immediate)
+11000011 aaaaaaaa bbbbbbbb cccccccc
+
+JL c(label) a(register) b(register)
+00100000 aaaaaaaa bbbbbbbb cccccccc
+
+JL c(label) a(immediate) b(register)
+10100000 aaaaaaaa bbbbbbbb cccccccc
+
+JL c(label) a(register) b(immediate)
+01100000 aaaaaaaa bbbbbbbb cccccccc
+
+JL c(label) a(immediate) b(immediate)
+11100000 aaaaaaaa bbbbbbbb cccccccc
+
+JLE c(label) a(register) b(register)
+00100001 aaaaaaaa bbbbbbbb cccccccc
+
+JLE c(label) a(immediate) b(register)
+10100001 aaaaaaaa bbbbbbbb cccccccc
+
+JLE c(label) a(register) b(immediate)
+01100001 aaaaaaaa bbbbbbbb cccccccc
+
+JLE c(label) a(immediate) b(immediate)
+11100001 aaaaaaaa bbbbbbbb cccccccc
+
+JE c(label) a(register) b(register)
+00100010 aaaaaaaa bbbbbbbb cccccccc
+
+JE c(label) a(immediate) b(register)
+10100010 aaaaaaaa bbbbbbbb cccccccc
+
+JE c(label) a(register) b(immediate)
+01100010 aaaaaaaa bbbbbbbb cccccccc
+
+JE c(label) a(immediate) b(immediate)
+11100010 aaaaaaaa bbbbbbbb cccccccc
+
+JNE c(label) a(register) b(register)
+00100011 aaaaaaaa bbbbbbbb cccccccc
+
+JNE c(label) a(immediate) b(register)
+10100011 aaaaaaaa bbbbbbbb cccccccc
+
+JNE c(label) a(register) b(immediate)
+01100011 aaaaaaaa bbbbbbbb cccccccc
+
+JNE c(label) a(immediate) b(immediate)
+11100011 aaaaaaaa bbbbbbbb cccccccc
+
+JGE c(label) a(register) b(register)
+00100100 aaaaaaaa bbbbbbbb cccccccc
+
+JGE c(label) a(immediate) b(register)
+10100100 aaaaaaaa bbbbbbbb cccccccc
+
+JGE c(label) a(register) b(immediate)
+01100100 aaaaaaaa bbbbbbbb cccccccc
+
+JGE c(label) a(immediate) b(immediate)
+11100100 aaaaaaaa bbbbbbbb cccccccc
+
+JG c(label) a(register) b(register)
+00100101 aaaaaaaa bbbbbbbb cccccccc
+
+JG c(label) a(immediate) b(register)
+10100101 aaaaaaaa bbbbbbbb cccccccc
+
+JG c(label) a(register) b(immediate)
+01100101 aaaaaaaa bbbbbbbb cccccccc
+
+JG c(label) a(immediate) b(immediate)
+11100101 aaaaaaaa bbbbbbbb cccccccc
+
+NOP
+11100011 00000000 00000000 00000000
+
+HALT
+11110011 00000000 00000000 00000000
+
+DRAW c(register) x(register) y(register)
+00001100 yyyy0000 0000xxxx cccccccc
+
+DRAW c(register) x(immediate) y(register)
+10000100 yyyy0000 0000xxxx cccccccc
+
+DRAW c(register) x(register) y(immediate)
+01000100 yyyy0000 0000xxxx cccccccc
+
+DRAW c(register) x(immediate) y(immediate)
+11000100 yyyy0000 0000xxxx cccccccc
+
+CLS
+11101011 00000000 00000000 00000000
