@@ -27,7 +27,8 @@ First things first you have to open the text file named "asm_code.txt" and withi
 To know which instructions the assembly supports, or even possibly add/edit a few instructions, open the text file named "instruction_map.txt".
 
 After you're done writing the assembly code, simply start the program "assembler.py" and copy paste the resulting binary code into the text file "bin_instructions.txt".
-Eventually I'll have modified or constructed my own emulator which you'll be able to simply boot it with the "bin_instructions.txt".
+
 To run it in Minecraft, you'll first have to run the program "v2_schematic.py" and put the resulting .schem file into your worldedit schematics folder.
 At the top right of the program memory, there's a single white block with a sign on it. Stand on there while pasting the schematic into the program memory. (Make sure to not forget pasting it with -a at the end!)
 
+You can also run it in the emulator, which directly utilizes the text file "bin_instructions.txt". It utilizes pygame for rendering the screen, so keep in mind that you have to install its library by running pip install pygame in the terminal.
